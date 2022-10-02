@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        tbody > tr > th {
+            text-align: end;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <!-- 
+            https://www.w3.org/WAI/tutorials/tables/two-headers/#table-with-header-cells-in-the-top-row-and-first-column
+        -->
+        <caption>Bestimmter Artikel</caption>
+
+        <thead>
+            <tr>
+                <td></td>
+                <th scope="col">Maskulin</th>
+                <th scope="col">Neutral</th>
+                <th scope="col">Feminin</th>
+                <th scope="col">Plural</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Nominativ</th>
+                <td>der</td>
+                <td>das</td>
+                <td>die</td>
+                <td>die</td>
+            </tr>
+            <tr>
+                <th scope="row">Akkusativ</th>
+                <td>den</td>
+                <td>das</td>
+                <td>die</td>
+                <td>die</td>
+            </tr>
+            <tr>
+                <th scope="row">Dativ</th>
+                <td>dem</td>
+                <td>dem</td>
+                <td>der</td>
+                <td>den</td>
+            </tr>
+            <tr>
+                <th scope="row">Genitiv</th>
+                <td>des</td>
+                <td>des</td>
+                <td>der</td>
+                <td>der</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <!-- 
+            https://www.w3.org/WAI/tutorials/tables/two-headers/#table-with-header-cells-in-the-top-row-and-first-column
+        -->
+        <caption>Unbestimmter Artikel</caption>
+
+        <thead>
+            <tr>
+                <td></td>
+                <th scope="col">Maskulin</th>
+                <th scope="col">Neutral</th>
+                <th scope="col">Feminin</th>
+                <th scope="col">Plural</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Nominativ</th>
+                <td>ein</td>
+                <td>ein</td>
+                <td>eine</td>
+                <td>keine</td>
+            </tr>
+            <tr>
+                <th scope="row">Akkusativ</th>
+                <td>einen</td>
+                <td>ein</td>
+                <td>eine</td>
+                <td>keine</td>
+            </tr>
+            <tr>
+                <th scope="row">Dativ</th>
+                <td>einem</td>
+                <td>einem</td>
+                <td>einer</td>
+                <td>keinen</td>
+            </tr>
+            <tr>
+                <th scope="row">Genitiv</th>
+                <td>eines</td>
+                <td>eines</td>
+                <td>einer</td>
+                <td>keiner</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

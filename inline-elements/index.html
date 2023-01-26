@@ -22,6 +22,21 @@
             padding-bottom: 100px;
             padding-left: 20px;
             padding-right : 20px;
+            outline: solid;
+            outline-color: blue;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            margin-right : 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            padding-right : 20px;
+            outline: solid;
+            outline-color: black;
         }
     </style>
 </head>
@@ -31,5 +46,25 @@
     <span>bar</span>
     <span>baz</span>
    </div> 
+   <div>
+    <span>foo</span>
+    <span>bar</span>
+    <span>baz</span>
+   </div> 
+   <!-- 
+        Horizontal margins never collapse.
+        https://stackoverflow.com/a/25456397/1364288
+        https://www.w3.org/TR/CSS21/box.html#collapsing-margins
+    -->
+   <div>
+        <a>foo</a>
+        <a>bar</a>
+        <a>baz</a>
+   </div>
+   <div>
+        <a>foo</a>
+        <a>bar</a>
+        <a>baz</a>
+   </div>
 </body>
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        "vertical margins will not have any effect on non-replaced inline elements."
+        https://stackoverflow.com/a/10324608/1364288
+        https://www.youtube.com/watch?v=x_i2gga-sYg
+        inline-block: you can set all margins and paddings, but without setting newlines
+        https://youtu.be/x_i2gga-sYg?t=744
+    -->
+    <style>
+        span {
+            margin-top: 100px;
+            margin-bottom: 100px;
+            margin-left: 20px;
+            margin-right : 20px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            padding-left: 20px;
+            padding-right : 20px;
+        }
+    </style>
+</head>
+<body>
+   <div>
+    <span>foo</span>
+    <span>bar</span>
+    <span>baz</span>
+   </div> 
+</body>
+</html>

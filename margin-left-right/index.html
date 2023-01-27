@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *,
+    ::before,
+    ::after {
+        box-sizing: border-box;
+    }
+    div {
+        width : 50;
+        outline-style: solid;
+        outline-color: black;
+    }
+    p {
+        outline-style: solid;
+        outline-color: blue;
+    }
+</style>
+<style>
+    .center p {
+        width : 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .flexy {
+        display: flex;
+    }
+    .flexy p:last-child {
+        margin-left: auto;
+    }
+</style>
+<body>
+    <p>To uses of margin-left: auto; centering an element and shifting an element in a
+    flex container all the way to the right. See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-left#values">this MDN table</a>.</p>
+    <div class="center">
+        <p>wee</p>
+        <p>boo</p>
+        <p>oof</p>
+    </div>
+    <div class="flexy">
+        <p>foo</p>
+        <p>bar</p>
+        <p>baz</p>
+    </div>
+</body>
+</html>

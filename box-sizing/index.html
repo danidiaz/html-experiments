@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        outline: solid;
+    }
+    .bb {
+        width : 50%;
+        border-width : 5em;
+        border-style: solid;
+        background-color: pink;
+        box-sizing: border-box;
+    }
+    .no-bb {
+        width : 50%;
+        border-width : 5em;
+        border-style: solid;
+        background-color: blue;
+    }
+</style>
+<body>
+    <p>We can clearly see that border-box is *not* the default box sizing!!!!</p>
+    <p>See <a href="https://github.com/sindresorhus/modern-normalize">this</a> and
+        <a href="https://www.paulirish.com/2012/box-sizing-border-box-ftw/">this</a>.</p>
+    <div class="bb">foo</div>
+    <div class="no-bb">bar</div>
+</body>
+</html>

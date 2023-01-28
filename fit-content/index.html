@@ -24,6 +24,15 @@
             margin-left: auto;
             margin-right: auto;
         }
+        .willitexpand {
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+        }
+        .willitexpand p:last-child {
+                margin-left: auto;
+            }
         p.nofit {
             margin-left: auto;
             margin-right: auto;
@@ -46,6 +55,12 @@
 <body>
    <div>
         <p class="fit">This is a p element with margin auto and with fit</p>
+        <div class="willitexpand">
+            <p>will</p>
+            <p>this</p>
+            <p>expand?</p>
+            <p>without fit-content, it does.</p>
+        </div>
         <p class="nofit">This is a p element with margin auto and with no fit</p>
         <p class="fit2">This is a p element with margin default and with fit</p>
         <p class="fit3">This is a p element with margin-left auto, margin-right 0, and with fit. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin-left#values">Documented?</a></p>

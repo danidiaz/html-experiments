@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>experiments with position</title>
+    <link rel="stylesheet" href="../boilerplate.css" />
+    <style>
+    * {
+        outline-style: solid;
+        outline-color: black;
+    }
+    </style>
+    <style>
+        p {
+            /* required for the svh to properly work, otherwise it overflows. */
+            margin-top: 0px;
+        }
+        body {
+            /* required for the svh to properly work, otherwise it overflows. */
+            margin-top: 0px;
+            /* removing only this still causes scrolling, even if there's no extra filler. */
+            margin-bottom: 0px;
+        }
+        .main {
+            /* this doesn't seem to work, the toolbar and address bar cause scrolling */
+            height: 100svh;
+        }
+    </style>
+    <style>
+        .absolute {
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            top: 100px;
+            left: 100px;
+        }
+        .fixed {
+            position: fixed;
+            width: 200px;
+            height: 100px;
+            top: 100px;
+            right: 100px;
+        }
+        .sticky {
+            position: sticky;
+            width: 200px;
+            height: 100px;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+   <div class="main">
+        <p>
+            <a href="https://www.youtube.com/watch?v=veEqYQlfNx8">The problems with viewport units.</a><a href="https://blog.logrocket.com/what-should-modern-css-boilerplate-look-like/#dont-reset-margins">I also had margin trouble, but.</a>
+        </p>
+        <p class="sticky">This is sticky positioned.</p>
+   </div> 
+   <div>
+    <p class="absolute">This is absolutely positioned.</p>
+    <p class="fixed">This is fixed positioned.</p>
+    <p>This is extra filler</p>
+    <p>This is extra filler</p>
+    <p>This is extra filler</p>
+    <p>This is extra filler</p>
+    <p>This is extra filler</p>
+    <p>This is extra filler</p>
+   </div>
+</body>
+</html>

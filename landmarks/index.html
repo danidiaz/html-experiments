@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let counter = 0;
+        const appendToAlert = () => {
+            const alertSection = document.getElementById('alert_section');
+            alertSection.innerHTML = `New alert with value ${ counter }.`;
+            counter++;
+        }
+        const myTimeout = setInterval(appendToAlert, 10000);
+    </script>
+</head>
+<body>
+    <header>
+        <h1>This is the main header of the page</h1>
+        <section role="alert" id="alert_section"></section> 
+    </header>
+    <nav>
+        <ul>
+            <li><a href="https://css-tricks.com/how-to-section-your-html/">How to Section Your HTML</a></li>
+            <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/general-principles.html">ARIA Landmarks Example</a></li>
+            <li><a href="https://blog.shimin.io/should-you-use-multiple-h1-s-in-2022/">Should you use multiple h1 heading elements on your page in 2022?</a></li>
+            <li><a href="https://stackoverflow.com/questions/12231112/why-h1-in-header">Why h1 in header?</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section aria-labelledby="s1">
+            <h2 id="s1">This is the header for the first section</h2>
+            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem explicabo quae aut dignissimos sequi optio. Ad vitae voluptas mollitia corporis ullam dolores! Nam, deserunt! Placeat sapiente dolorum odit velit itaque?</span><span>Magnam sunt temporibus vero saepe, a sed. Officiis sapiente voluptatem natus quo eum laboriosam neque, illo veritatis similique. Minima quod perferendis sit impedit. Consectetur quos excepturi possimus vel, delectus quaerat?</span><span>Nisi voluptas corrupti cumque temporibus exercitationem? Magni error sunt voluptas odit cupiditate reprehenderit repellendus. Id amet, veritatis modi minima autem reprehenderit consequatur vitae, iure praesentium ea quis iste, error suscipit.</span><span>Inventore, cum aliquid ea accusantium vel optio error, ipsa placeat culpa odit, modi totam. Tenetur magni culpa ea totam odio suscipit molestiae maxime asperiores dolores, repudiandae illo magnam dolore fuga.</span></p>
+        </section>
+        <section aria-labelledby="s2">
+            <h2 id="s2">This is the header for the second section</h2>
+            <p><span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate facilis eius earum corporis nulla illo placeat magnam deleniti eaque doloremque! Sequi, repellendus iure. A omnis sit corporis maxime iusto assumenda.</span><span>Eligendi aliquam itaque facere perspiciatis animi soluta distinctio necessitatibus libero eos iste dolore dolorem, atque accusamus sunt molestias natus quasi officiis! Dicta vero consequatur ad vitae. Porro aperiam magnam impedit!</span><span>Officia, qui delectus eligendi perspiciatis, quia nam quisquam sed, cupiditate quibusdam totam incidunt doloremque? Quis quos neque assumenda aliquam recusandae libero aliquid consectetur, autem accusamus ea dolorem corrupti cupiditate obcaecati.</span></p>
+        </section>
+    </main>
+    <footer>This is the footer</footer>
+</body>
+</html>

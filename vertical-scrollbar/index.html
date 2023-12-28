@@ -3,21 +3,23 @@
 <head>
     <!--
         The aim in this page is to have a vertical scrollbar for a component,
-        when the component 
+        when the scrollable component 
         - doesn't have a fixed height or max-height .
         - is deeply (?) nested inside a component with 100vh.
         - we want the scrollable component to use all the remaining vertical space.
         - there are also other sibling components above it.
-        - one of the components has display:grid to create columns.
+        - one parent component has display:grid to create columns.
 
-        The only way I've found is to use flex in all intermediate components,
-        with flex-grow set to 1.
+        The only way I've found to accomplish this is to use flex in all
+        intermediate components, with flex-grow set to 1.
 
-        The scrollable component also has flex-grow set to 1, but also flex-basis set to 0
-        so that the height doesn't start with the full height of the contents.
-
-        As for the intermediate compoenent with a grid, if must have flex-grow set to 1 
-        as well.
+        The scrollable component has flex-grow set to 1 as well, and also
+        flex-basis set to 0 so that the height doesn't start with the full
+        height of the contents. If flex-basis isn't set, the scrollbar doesn't
+        appear!
+        
+        As for the intermediate component with a grid, it must have flex-grow
+        set to 1 as well.
     -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,11 +37,12 @@
             display:flex;
             flex-direction: column;
         }
-        #heady {
+        h1 {
             height: 200px;
             background-color: brown;
+            margin: 0;
         }
-        section {
+        .twocols {
             flex-grow: 1;
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -51,10 +54,11 @@
             justify-content: stretch;
             */
         }
-        #inny {
+        .somecol {
             /*
-            Why doesn't this require flex-grow: 1; ?
-            Is it because the parent element has display: grid?
+            This doesn't require flex-grow: 1; ?
+            The parent element has display: grid and I guess an implicit 1fr for the 
+            column height.
             */
             display: flex;
             flex-direction: column;
@@ -71,21 +75,23 @@
             /* height: 100%; */
         }
         .blocko {
-            margin-left: auto;
-            margin-right: auto;
             height: 200px;
-            width: 200px;
             border-style: solid;
             background-color: cyan;
         }
     </style>
 </head>
 <body>
+   <!-- occupies the full height of the screen-->
    <div id="container">
-    <div id="heady"></div>
-    <section>
-        <div id="inny">
+    <h1>some header or whatever, to occupy vertical space</h1>
+    <div class="twocols">
+        <!-- a column -->
+        <div class="somecol">
+            <!-- The component for which we want the scrollbar -->
             <div id="scrolly">
+                <!-- a buch of boxes, with sufficient height to cause the
+                scrollbar to appear -->
                 <div class="blocko"></div>
                 <div class="blocko"></div>
                 <div class="blocko"></div>
@@ -108,8 +114,9 @@
                 <div class="blocko"></div>
             </div>
         </div>
-        <div>foo</div>
-    </section> 
+        <!-- another column, just for the sake of it -->
+        <div class="somecol">foo</div>
+    </div.twocols> 
    </div> 
 </body>
 </html>

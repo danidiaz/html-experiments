@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--
+        The aim in this page is to have a vertical scrollbar for a component,
+        when the component 
+        - doesn't have a fixed height or max-height .
+        - is deeply (?) nested inside a component with 100vh.
+        - we want the scrollable component to use all the remaining vertical space.
+        - there are also other sibling components above it.
+        - one of the components has display:grid to create columns.
+
+        The only way I've found is to use flex in all intermediate components,
+        with flex-grow set to 1.
+
+        The scrollable component also has flex-grow set to 1, but also flex-basis set to 0
+        so that the height doesn't start with the full height of the contents.
+
+        As for the intermediate compoenent with a grid, if must have flex-grow set to 1 
+        as well.
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
